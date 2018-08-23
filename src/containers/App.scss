@@ -2,4 +2,58 @@
     margin-top: 40px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     border-radius: 5px; 
+
+    .header {
+        background-color: #fff;
+        min-height: 50px;
+        border: 1px solid #ccc;
+        border-bottom: none;
+        border-radius: 5px 5px 0 0; 
+        text-align: right;
+        display: flex;
+        padding: 0 20px;
+
+        .new-task {
+            width: 100%;
+            border: none;
+        }
+
+        .add-task {
+            border: none;
+
+            .save-button {
+                font-size: 25px;
+                line-height: inherit;
+                color: #5585e4;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .footer {
+        background-color: #fff;
+        min-height: 50px;
+        border: 1px solid #ccc;
+        border-bottom: none;
+        border-radius: 0 0 5px 5px; 
+        text-align: center;
+    
+    
+        span a {
+            text-decoration: none;
+            color: #5585e4;
+            border: 1px solid rgba(85, 133, 228, .4);
+            padding: 5px 15px;
+            border-radius: 5px;
+            margin: 10px;
+            display: inline-flex;
+            width: max-content;
+        }
+        
+        span a:hover {
+            color: #ffffff;
+            background: rgba(85, 133, 228, .6);
+        }
+    }
 }

@@ -10,6 +10,7 @@ const config = {
         path: DIST_DIR,
         filename: "bundle.js",
     },
+    devtool: 'source-map',
     module: {
         rules: [
             {

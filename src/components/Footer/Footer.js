@@ -1,5 +1,5 @@
 import React from "react";
-import Classes from "../Task/Task.scss"
+import Classes from "../../containers/App.scss";
 
 const Footer = (props) => {
   
