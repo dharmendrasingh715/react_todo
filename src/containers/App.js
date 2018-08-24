@@ -40,11 +40,28 @@ class Tasks extends Component {
             tasks: tasks
         })
     };
-
+    getId = () => {
+        return '_' + Math.random().toString(36).substr(2, 9);
+    }
     addTaskHandler = (event) => {
         event.preventDefault();
+        const inputText = event.currentTarget.previousSibling;
+        if (inputText.value !== "") {
+            var newTask = {
+              id: this.getId(),
+              task: inputText.value,
+              completed: false
+            };
+            console.log("previous state:" + this.state.tasks);
 
-        console.log(event.currentTarget);
+            this.setState((prevState) => {
+              return { 
+                tasks: prevState.tasks.concat(newTask) 
+              };
+            });
+           
+            inputText.value = "";
+          }
     }
 
     render() {
