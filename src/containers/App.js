@@ -11,11 +11,11 @@ class Tasks extends Component {
 
         this.state = {
             tasks: [{
-                id: 1,
+                id: this.getId(),
                 task: "Test this task",
                 completed: false
             },{
-                id: 2,
+                id: this.getId(),
                 task: "Push it to github",
                 completed: false
             }]
@@ -41,7 +41,8 @@ class Tasks extends Component {
         })
     };
     getId = () => {
-        return '_' + Math.random().toString(36).substr(2, 9);
+        return  Math.random().toString(22).replace('0.', '') ;
+        
     }
     addTaskHandler = (event) => {
         event.preventDefault();
@@ -52,12 +53,13 @@ class Tasks extends Component {
               task: inputText.value,
               completed: false
             };
-            console.log("previous state:" + this.state.tasks);
 
             this.setState((prevState) => {
-              return { 
-                tasks: prevState.tasks.concat(newTask) 
-              };
+                const tasks = [...prevState.tasks];
+                tasks.push(newTask);
+                return { 
+                    tasks: tasks 
+                };
             });
            
             inputText.value = "";
@@ -65,7 +67,7 @@ class Tasks extends Component {
     }
 
     render() {
-        console.log(this.state.tasks);
+        console.log(this.state.tasks instanceof Array );
         const tasks = this.state.tasks.map((task, index)=>{
             return <Task key={index} id = {task.id} task = {task.task} completed = {task.completed} changed = {this.changeTaskStateHandler}/>
         })
