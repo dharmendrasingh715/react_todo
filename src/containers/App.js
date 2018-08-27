@@ -3,6 +3,8 @@ import Classes from './App.scss';
 import Task from "../components/Task/Task";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import { Switch, Route } from 'react-router-dom'
+
 
 class Tasks extends Component {
 
@@ -48,7 +50,6 @@ class Tasks extends Component {
     }
 
     render() {
-        console.log(this.state.tasks);
         const tasks = this.state.tasks.map((task, index)=>{
             return <Task key={index} id = {task.id} task = {task.task} completed = {task.completed} changed = {this.changeTaskStateHandler}/>
         })
