@@ -8,19 +8,16 @@
         min-height: 50px;
         border: 1px solid #ccc;
         border-bottom: none;
-        border-radius: 5px 5px 0 0; 
+        border-radius: 5px 5px 0 0;
         text-align: right;
         display: flex;
         padding: 0 20px;
-
         .new-task {
             width: 100%;
             border: none;
         }
-
         .add-task {
             border: none;
-
             .save-button {
                 font-size: 25px;
                 line-height: inherit;
@@ -30,16 +27,13 @@
             }
         }
     }
-
     .footer {
         background-color: #fff;
         min-height: 50px;
         border: 1px solid #ccc;
         border-bottom: none;
-        border-radius: 0 0 5px 5px; 
+        border-radius: 0 0 5px 5px;
         text-align: center;
-    
-    
         span a {
             text-decoration: none;
             color: #5585e4;
@@ -50,7 +44,6 @@
             display: inline-flex;
             width: max-content;
         }
-        
         span a:hover {
             color: #ffffff;
             background: rgba(85, 133, 228, .6);

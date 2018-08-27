@@ -1,5 +1,7 @@
 import React from "react";
 import Classes from "../../containers/App.scss";
+import { Link } from 'react-router-dom'
+
 
 const Footer = (props) => {
   
@@ -7,13 +9,15 @@ const Footer = (props) => {
         
             <div className={Classes.footer}>
                 <span>
-                    <a href="#">All</a>
+                    {/* <a href="/all">All</a> */}
+                    <Link to="/all">All</Link>
                 </span>
                 <span>
-                    <a href="#">Completed</a>
+                    {/* <a href="/completed">Completed</a> */}
+                    <Link to="/completed">Completed</Link>
                 </span>
                 <span>
-                    <a href="#">Clear Completed</a>
+                    <a href="/">Clear Completed</a>
                 </span>
             </div>
     )
