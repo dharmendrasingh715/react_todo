@@ -10,6 +10,9 @@ const config = {
         path: DIST_DIR,
         filename: "bundle.js",
     },
+    devServer: {
+        historyApiFallback: true
+    },
     devtool: 'source-map',
     module: {
         rules: [
