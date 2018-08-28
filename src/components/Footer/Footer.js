@@ -4,22 +4,22 @@ import { Link } from 'react-router-dom'
 
 
 const Footer = (props) => {
-  
+    console.log(props);
+
     return (
-        
-            <div className={Classes.footer}>
-                <span>
-                    {/* <a href="/all">All</a> */}
-                    <Link to="/all">All</Link>
-                </span>
-                <span>
-                    {/* <a href="/completed">Completed</a> */}
-                    <Link to="/completed">Completed</Link>
-                </span>
-                <span>
-                    <a href="/">Clear Completed</a>
-                </span>
-            </div>
+
+        <div className={Classes.footer}>
+            <span>
+                <Link to="/all">All</Link>
+            </span>
+            <span>
+                <Link to="/completed">Completed</Link>
+            </span>
+            <span>
+
+                <button onClick={() => props.clearCompleted()}>clear</button>
+            </span>
+        </div>
     )
 }
 
